@@ -1,0 +1,117 @@
+/* ------------------  RESET  --------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ------------------  VARIABLES  --------------*/
+:root {
+  --White: hsl(0, 0%, 100%);
+  --LightGray: hsl(212, 45%, 89%);
+  --GrayishBlue: hsl(220, 15%, 55%);
+  --DarkBlue: hsl(218, 44%, 22%);
+  --Blue: hsl(217, 95%, 58%);
+}
+
+/* ------------------  BODY  --------------*/
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--LightGray);
+}
+
+/* ------------------  CARDS CONTAINER  --------------*/
+.cards-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* ------------------  MAIN CONTAINER  --------------*/
+.main-container {
+  background-color: var(--White);
+  width: 320px;
+  height: 500px;
+  margin: 60px auto;
+  border-radius: 16px;
+  padding: 16px;
+  transition: 300ms;
+}
+
+.main-container:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 10px;
+  box-shadow: 0px 4px 12px 1px var(--Blue);
+  transition: 300ms;
+  margin-top: 50px;
+}
+
+/* ------------------  IMG CONTAINER  --------------*/
+.img-container {
+  background-image: url(images/image-qr-code.png);
+  width: 100%;
+  height: 288px;
+  background-size: cover;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0px 0px 12px -2px var(--DarkBlue);
+  animation: UpCenter 500ms none;
+}
+
+h1 {
+  color: var(--DarkBlue);
+  font-size: 23px;
+  text-align: center;
+  margin-bottom: 24px;
+  animation: leftCenter 500ms none;
+}
+
+p {
+  font-size: 15px;
+  color: var(--GrayishBlue);
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  animation: rightCenter 700ms none;
+}
+
+/* ------------------  FOOTER  --------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Blue);
+  text-decoration: none;
+}
+
+/* ------------------  ANIMATIONS  --------------*/
+@keyframes UpCenter {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes leftCenter {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightCenter {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
